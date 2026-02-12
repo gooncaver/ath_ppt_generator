@@ -66,8 +66,13 @@ class LLMClient:
                 "model": self.model,
                 "messages": messages,
                 "temperature": temperature,
-                "max_tokens": max_tokens
             }
+            
+            # GPT-5 uses max_completion_tokens instead of max_tokens
+            if self.model.startswith("gpt-5") or self.model.startswith("o1"):
+                params["max_completion_tokens"] = max_tokens
+            else:
+                params["max_tokens"] = max_tokens
             
             if response_format:
                 params["response_format"] = response_format

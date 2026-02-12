@@ -40,6 +40,11 @@ output/
 *.pptx
 *.ppt
 
+# Input files
+input/
+*.md
+*.txt
+
 # Testing
 .pytest_cache/
 .coverage
@@ -50,3 +55,5 @@ htmlcov/
 temp/
 tmp/
 Themes/*_extracted/
+slide_analysis.json
+detailed_slide_analysis.json

@@ -68,38 +68,31 @@ class ContentPlanner:
             {"role": "user", "content": prompt}
         ]
         
-        # Call LLM
+        # Call LLM with structured outputs
         try:
+            # Use JSON schema for guaranteed structure (Structured Outputs)
+            schema = self.prompts.slide_plan_schema()
             response = self.llm.chat_completion(
                 messages=messages,
                 temperature=0.7,
                 max_tokens=4096,
-                response_format={"type": "json_object"}
+                response_format={
+                    "type": "json_schema",
+                    "json_schema": {
+                        "name": "slide_plan",
+                        "strict": True,
+                        "schema": schema
+                    }
+                }
             )
             
             print(f"  Tokens used: {response['tokens']}, Cost: ${response['cost']:.4f}")
             
-            # Parse JSON response
-            content_text = response['content']
+            # Parse JSON response (guaranteed structure from schema)
+            result = json.loads(response['content'])
             
-            # Handle different JSON formats
-            try:
-                # Try parsing as complete JSON object
-                result = json.loads(content_text)
-                
-                # If it's wrapped in a slides key, extract it
-                if isinstance(result, dict) and 'slides' in result:
-                    slide_plan = result['slides']
-                elif isinstance(result, list):
-                    slide_plan = result
-                else:
-                    # Try to extract array from object
-                    slide_plan = list(result.values())[0] if result else []
-                    
-            except json.JSONDecodeError as e:
-                print(f"Warning: Failed to parse JSON response: {e}")
-                print(f"Response: {content_text[:500]}")
-                raise ValueError("LLM did not return valid JSON")
+            # Extract slides (schema guarantees this structure)
+            slide_plan = result['slides']
             
             # Validate and clean plan
             slide_plan = self._validate_plan(slide_plan, available_layouts)

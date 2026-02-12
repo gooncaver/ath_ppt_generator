@@ -3,15 +3,21 @@ Smart Slide Generator - Phase 2
 Uses LLM intelligence for layout selection and content organization
 """
 
+import sys
+from pathlib import Path
+
+# Add parent directory to path for imports when running as script
+if __name__ == "__main__":
+    sys.path.insert(0, str(Path(__file__).parent.parent))
+
 from pptx import Presentation
 from pptx.util import Inches, Pt
-from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Optional, Any
 
-from .llm.client import LLMClient
-from .llm.planner import ContentPlanner
-from .template_inspector import TemplateInspector
+from src.llm.client import LLMClient
+from src.llm.planner import ContentPlanner
+from src.template_inspector import TemplateInspector
 
 
 class SmartGenerator:
@@ -39,9 +45,17 @@ class SmartGenerator:
         # Get available layouts
         inspector = TemplateInspector(str(self.template_path))
         self.layouts = inspector.get_slide_layouts()
-        self.layout_names = [layout['name'] for layout in self.layouts]
+        all_layout_names = [layout['name'] for layout in self.layouts]
         
-        print(f"✓ Loaded template with {len(self.layout_names)} layouts")
+        # Filter to consistent background color (prefer dark backgrounds)
+        # Exclude layouts with 'light', 'white', or 'Light' in the name
+        dark_layouts = [name for name in all_layout_names 
+                       if not any(keyword in name.lower() for keyword in ['light', 'white'])]
+        
+        # Use dark layouts if we have enough, otherwise use all
+        self.layout_names = dark_layouts if len(dark_layouts) >= 10 else all_layout_names
+        
+        print(f"✓ Loaded template with {len(all_layout_names)} layouts (using {len(self.layout_names)} consistent layouts)")
     
     def get_layout_by_name(self, name: str):
         """
@@ -233,9 +247,20 @@ class SmartGenerator:
         if not input_path.exists():
             raise FileNotFoundError(f"Input file not found: {input_file}")
         
-        # Read content
-        with open(input_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+        # Read content with encoding detection
+        encodings = ['utf-8', 'utf-8-sig', 'latin-1', 'cp1252', 'iso-8859-1']
+        content = None
+        
+        for encoding in encodings:
+            try:
+                with open(input_path, 'r', encoding=encoding) as f:
+                    content = f.read()
+                break
+            except UnicodeDecodeError:
+                continue
+        
+        if content is None:
+            raise ValueError(f"Could not decode file {input_file} with any supported encoding")
         
         # Generate presentation
         return self.generate_from_text(content, output_path, target_slides)

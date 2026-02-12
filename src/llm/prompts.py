@@ -10,6 +10,50 @@ class PromptTemplates:
     """Collection of prompt templates for slide generation"""
     
     @staticmethod
+    def slide_plan_schema() -> Dict:
+        """Return JSON schema for structured slide plan output"""
+        return {
+            "type": "object",
+            "properties": {
+                "slides": {
+                    "type": "array",
+                    "description": "Array of slide specifications",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "slide_number": {
+                                "type": "integer",
+                                "description": "Sequential slide number starting from 1"
+                            },
+                            "layout_name": {
+                                "type": "string",
+                                "description": "Exact layout name from available layouts list"
+                            },
+                            "title": {
+                                "type": "string",
+                                "description": "Slide title"
+                            },
+                            "content": {
+                                "type": "array",
+                                "description": "Array of bullet points (4-6 detailed bullets per slide)",
+                                "items": {"type": "string"},
+                                "minItems": 1
+                            },
+                            "notes": {
+                                "type": "string",
+                                "description": "Presenter notes or design rationale"
+                            }
+                        },
+                        "required": ["slide_number", "layout_name", "title", "content", "notes"],
+                        "additionalProperties": False
+                    }
+                }
+            },
+            "required": ["slides"],
+            "additionalProperties": False
+        }
+    
+    @staticmethod
     def content_planning_prompt(
         content: str,
         available_layouts: List[str],
@@ -70,6 +114,20 @@ QUALITY STANDARDS:
 - Logical grouping of related content
 - Smooth transitions between topics
 - Professional pacing and flow
+
+VERBOSITY REQUIREMENTS (CRITICAL):
+- Each content slide MUST have 4-6 detailed, comprehensive bullets
+- Expand on key points from source material with supporting details
+- Include context, examples, and explanations where relevant
+- NEVER create slides with only 1-2 sparse bullets unless it's a section divider
+- Aim to fully utilize each slide's content capacity
+- Preserve important details from the input - don't oversimplify
+- If source content is detailed, maintain that detail in the bullets
+
+LAYOUT CONSISTENCY:
+- All provided layouts use a consistent background color scheme
+- Select layouts based on content structure, not visual variety
+- Maintain visual consistency throughout the presentation
 
 Generate the complete slide plan now:"""
         
