@@ -1,0 +1,2311 @@
+{
+  "template_path": "templates/SavedTheme.pptx",
+  "total_layouts": 74,
+  "schemas": {
+    "Custom Layout": {
+      "layout_name": "Custom Layout",
+      "category": "blank",
+      "fields": [],
+      "required_fields": [],
+      "field_metadata": {},
+      "placeholder_count": 0,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "1_Custom Layout": {
+      "layout_name": "1_Custom Layout",
+      "category": "blank",
+      "fields": [],
+      "required_fields": [],
+      "field_metadata": {},
+      "placeholder_count": 0,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "2_Custom Layout": {
+      "layout_name": "2_Custom Layout",
+      "category": "blank",
+      "fields": [],
+      "required_fields": [],
+      "field_metadata": {},
+      "placeholder_count": 0,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "10_Title and Content": {
+      "layout_name": "10_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "11_Title and Content": {
+      "layout_name": "11_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "17_Title and Content": {
+      "layout_name": "17_Title and Content",
+      "category": "title_slide",
+      "fields": [
+        "title",
+        "subtitle"
+      ],
+      "required_fields": [
+        "title",
+        "subtitle"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "subtitle": {
+          "type": "text",
+          "placeholder_type": "SUBTITLE (4)",
+          "max_length": 80,
+          "purpose": "Secondary title"
+        }
+      },
+      "placeholder_count": 2,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "Title Slide": {
+      "layout_name": "Title Slide",
+      "category": "title_slide",
+      "fields": [
+        "title",
+        "subtitle"
+      ],
+      "required_fields": [
+        "title",
+        "subtitle"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "subtitle": {
+          "type": "text",
+          "placeholder_type": "SUBTITLE (4)",
+          "max_length": 80,
+          "purpose": "Secondary title"
+        }
+      },
+      "placeholder_count": 2,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "1_Title Slide": {
+      "layout_name": "1_Title Slide",
+      "category": "title_slide",
+      "fields": [
+        "title",
+        "subtitle"
+      ],
+      "required_fields": [
+        "title",
+        "subtitle"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "subtitle": {
+          "type": "text",
+          "placeholder_type": "SUBTITLE (4)",
+          "max_length": 80,
+          "purpose": "Secondary title"
+        }
+      },
+      "placeholder_count": 2,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "21_Title and Content": {
+      "layout_name": "21_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 6,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "29_Title and Content": {
+      "layout_name": "29_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 6,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "35_Title and Content": {
+      "layout_name": "35_Title and Content",
+      "category": "image_focused",
+      "fields": [
+        "title",
+        "content",
+        "image1",
+        "image2",
+        "image3",
+        "image4"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        },
+        "image1": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 1"
+        },
+        "image2": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 2"
+        },
+        "image3": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 3"
+        },
+        "image4": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 4"
+        }
+      },
+      "placeholder_count": 10,
+      "supports_images": true,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "complex"
+    },
+    "36_Title and Content": {
+      "layout_name": "36_Title and Content",
+      "category": "image_focused",
+      "fields": [
+        "title",
+        "content",
+        "image1",
+        "image2",
+        "image3"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        },
+        "image1": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 1"
+        },
+        "image2": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 2"
+        },
+        "image3": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 3"
+        }
+      },
+      "placeholder_count": 8,
+      "supports_images": true,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "complex"
+    },
+    "23_Title and Content": {
+      "layout_name": "23_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 5,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "27_Title and Content": {
+      "layout_name": "27_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 5,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "22_Title and Content": {
+      "layout_name": "22_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 7,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "28_Title and Content": {
+      "layout_name": "28_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 7,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "42_Title and Content": {
+      "layout_name": "42_Title and Content",
+      "category": "image_focused",
+      "fields": [
+        "title",
+        "content",
+        "image1",
+        "image2",
+        "image3",
+        "image4",
+        "image5",
+        "image6",
+        "image7",
+        "image8"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        },
+        "image1": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 1"
+        },
+        "image2": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 2"
+        },
+        "image3": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 3"
+        },
+        "image4": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 4"
+        },
+        "image5": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 5"
+        },
+        "image6": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 6"
+        },
+        "image7": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 7"
+        },
+        "image8": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 8"
+        }
+      },
+      "placeholder_count": 18,
+      "supports_images": true,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "complex"
+    },
+    "44_Title and Content": {
+      "layout_name": "44_Title and Content",
+      "category": "image_focused",
+      "fields": [
+        "title",
+        "content",
+        "image1",
+        "image2",
+        "image3",
+        "image4",
+        "image5",
+        "image6",
+        "image7",
+        "image8"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        },
+        "image1": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 1"
+        },
+        "image2": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 2"
+        },
+        "image3": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 3"
+        },
+        "image4": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 4"
+        },
+        "image5": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 5"
+        },
+        "image6": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 6"
+        },
+        "image7": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 7"
+        },
+        "image8": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 8"
+        }
+      },
+      "placeholder_count": 18,
+      "supports_images": true,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "complex"
+    },
+    "1_Number/Stats highlight": {
+      "layout_name": "1_Number/Stats highlight",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content",
+        "chart_data"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "BODY (2)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        },
+        "chart_data": {
+          "type": "chart",
+          "placeholder_type": "CHART (8)",
+          "purpose": "Chart/graph data"
+        }
+      },
+      "placeholder_count": 10,
+      "supports_images": false,
+      "supports_charts": true,
+      "supports_tables": false,
+      "complexity": "moderate"
+    },
+    "2_Number/Stats highlight": {
+      "layout_name": "2_Number/Stats highlight",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content",
+        "chart_data"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "BODY (2)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        },
+        "chart_data": {
+          "type": "chart",
+          "placeholder_type": "CHART (8)",
+          "purpose": "Chart/graph data"
+        }
+      },
+      "placeholder_count": 10,
+      "supports_images": false,
+      "supports_charts": true,
+      "supports_tables": false,
+      "complexity": "moderate"
+    },
+    "Agenda option 1": {
+      "layout_name": "Agenda option 1",
+      "category": "agenda",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 21,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "Agenda option 2": {
+      "layout_name": "Agenda option 2",
+      "category": "agenda",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 11,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "Number/Stats highlight": {
+      "layout_name": "Number/Stats highlight",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "BODY (2)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 22,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "3_Number/Stats highlight": {
+      "layout_name": "3_Number/Stats highlight",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "BODY (2)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 22,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "37_Title and Content": {
+      "layout_name": "37_Title and Content",
+      "category": "section_header",
+      "fields": [
+        "title"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        }
+      },
+      "placeholder_count": 2,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "Table": {
+      "layout_name": "Table",
+      "category": "general",
+      "fields": [
+        "title",
+        "table_data"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "table_data": {
+          "type": "table",
+          "placeholder_type": "TABLE (12)",
+          "purpose": "Tabular data"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": true,
+      "complexity": "simple"
+    },
+    "1_Table": {
+      "layout_name": "1_Table",
+      "category": "general",
+      "fields": [
+        "title",
+        "table_data"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "table_data": {
+          "type": "table",
+          "placeholder_type": "TABLE (12)",
+          "purpose": "Tabular data"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": true,
+      "complexity": "simple"
+    },
+    "39_Title and Content": {
+      "layout_name": "39_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "45_Title and Content": {
+      "layout_name": "45_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "Title Content and Image": {
+      "layout_name": "Title Content and Image",
+      "category": "mixed_content",
+      "fields": [
+        "title",
+        "content",
+        "image1"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        },
+        "image1": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 1"
+        }
+      },
+      "placeholder_count": 4,
+      "supports_images": true,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "moderate"
+    },
+    "1_Title Content and Image": {
+      "layout_name": "1_Title Content and Image",
+      "category": "mixed_content",
+      "fields": [
+        "title",
+        "content",
+        "image1"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        },
+        "image1": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 1"
+        }
+      },
+      "placeholder_count": 4,
+      "supports_images": true,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "moderate"
+    },
+    "Case Study Intro Page": {
+      "layout_name": "Case Study Intro Page",
+      "category": "mixed_content",
+      "fields": [
+        "title",
+        "content",
+        "image1"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        },
+        "image1": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 1"
+        }
+      },
+      "placeholder_count": 4,
+      "supports_images": true,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "moderate"
+    },
+    "3_Case Study Intro Page": {
+      "layout_name": "3_Case Study Intro Page",
+      "category": "mixed_content",
+      "fields": [
+        "title",
+        "content",
+        "image1"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        },
+        "image1": {
+          "type": "image",
+          "placeholder_type": "PICTURE (18)",
+          "purpose": "Image placeholder 1"
+        }
+      },
+      "placeholder_count": 4,
+      "supports_images": true,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "moderate"
+    },
+    "1_Case Study Intro Page": {
+      "layout_name": "1_Case Study Intro Page",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 4,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "4_Case Study Intro Page": {
+      "layout_name": "4_Case Study Intro Page",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 4,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "2_Case Study Intro Page": {
+      "layout_name": "2_Case Study Intro Page",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "5_Case Study Intro Page": {
+      "layout_name": "5_Case Study Intro Page",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "41_Title and Content": {
+      "layout_name": "41_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "40_Title and Content": {
+      "layout_name": "40_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "43_Title and Content": {
+      "layout_name": "43_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "46_Title and Content": {
+      "layout_name": "46_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "47_Title and Content": {
+      "layout_name": "47_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "18_Title and Content": {
+      "layout_name": "18_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "20_Title and Content": {
+      "layout_name": "20_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "26_Title and Content": {
+      "layout_name": "26_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "38_Title and Content": {
+      "layout_name": "38_Title and Content",
+      "category": "blank",
+      "fields": [],
+      "required_fields": [],
+      "field_metadata": {},
+      "placeholder_count": 1,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "14_Title and Content": {
+      "layout_name": "14_Title and Content",
+      "category": "section_header",
+      "fields": [
+        "title"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        }
+      },
+      "placeholder_count": 2,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "16_Title and Content": {
+      "layout_name": "16_Title and Content",
+      "category": "section_header",
+      "fields": [
+        "title"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        }
+      },
+      "placeholder_count": 2,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "15_Title and Content": {
+      "layout_name": "15_Title and Content",
+      "category": "section_header",
+      "fields": [
+        "title"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        }
+      },
+      "placeholder_count": 2,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "Blank": {
+      "layout_name": "Blank",
+      "category": "blank",
+      "fields": [],
+      "required_fields": [],
+      "field_metadata": {},
+      "placeholder_count": 1,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "9_Divider": {
+      "layout_name": "9_Divider",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "BODY (2)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 2,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "10_Divider": {
+      "layout_name": "10_Divider",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "BODY (2)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 2,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "12_Divider": {
+      "layout_name": "12_Divider",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "BODY (2)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 2,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "11_Divider": {
+      "layout_name": "11_Divider",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "BODY (2)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 2,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "13_Divider": {
+      "layout_name": "13_Divider",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "BODY (2)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 2,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "14_Divider": {
+      "layout_name": "14_Divider",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "BODY (2)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 2,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "5_Divider": {
+      "layout_name": "5_Divider",
+      "category": "section_header",
+      "fields": [
+        "title"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        }
+      },
+      "placeholder_count": 1,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "6_Divider": {
+      "layout_name": "6_Divider",
+      "category": "section_header",
+      "fields": [
+        "title"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        }
+      },
+      "placeholder_count": 1,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "4_Divider": {
+      "layout_name": "4_Divider",
+      "category": "section_header",
+      "fields": [
+        "title"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        }
+      },
+      "placeholder_count": 1,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "7_Divider": {
+      "layout_name": "7_Divider",
+      "category": "section_header",
+      "fields": [
+        "title"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        }
+      },
+      "placeholder_count": 1,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "8_Divider": {
+      "layout_name": "8_Divider",
+      "category": "section_header",
+      "fields": [
+        "title"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        }
+      },
+      "placeholder_count": 1,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "2_Title Slide": {
+      "layout_name": "2_Title Slide",
+      "category": "section_header",
+      "fields": [
+        "title"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        }
+      },
+      "placeholder_count": 1,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "4_Title Slide": {
+      "layout_name": "4_Title Slide",
+      "category": "section_header",
+      "fields": [
+        "title"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        }
+      },
+      "placeholder_count": 1,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "3_Title Slide": {
+      "layout_name": "3_Title Slide",
+      "category": "section_header",
+      "fields": [
+        "title"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        }
+      },
+      "placeholder_count": 1,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "5_Title Slide": {
+      "layout_name": "5_Title Slide",
+      "category": "section_header",
+      "fields": [
+        "title"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        }
+      },
+      "placeholder_count": 1,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "6_Title Slide": {
+      "layout_name": "6_Title Slide",
+      "category": "section_header",
+      "fields": [
+        "title"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        }
+      },
+      "placeholder_count": 1,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "7_Title Slide": {
+      "layout_name": "7_Title Slide",
+      "category": "section_header",
+      "fields": [
+        "title"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "CENTER_TITLE (3)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        }
+      },
+      "placeholder_count": 1,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "12_Title and Content": {
+      "layout_name": "12_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "13_Title and Content": {
+      "layout_name": "13_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "title",
+        "content"
+      ],
+      "required_fields": [
+        "title"
+      ],
+      "field_metadata": {
+        "title": {
+          "type": "text",
+          "placeholder_type": "TITLE (1)",
+          "max_length": 80,
+          "purpose": "Main slide title"
+        },
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 3,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "24_Title and Content": {
+      "layout_name": "24_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "content"
+      ],
+      "required_fields": [],
+      "field_metadata": {
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 9,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "25_Title and Content": {
+      "layout_name": "25_Title and Content",
+      "category": "text_content",
+      "fields": [
+        "content"
+      ],
+      "required_fields": [],
+      "field_metadata": {
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "OBJECT (7)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 9,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "Contact info": {
+      "layout_name": "Contact info",
+      "category": "text_content",
+      "fields": [
+        "content"
+      ],
+      "required_fields": [],
+      "field_metadata": {
+        "content": {
+          "type": "bullets",
+          "placeholder_type": "BODY (2)",
+          "max_bullets": 6,
+          "max_bullet_length": 120,
+          "purpose": "Main slide content"
+        }
+      },
+      "placeholder_count": 1,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "16_Divider": {
+      "layout_name": "16_Divider",
+      "category": "blank",
+      "fields": [],
+      "required_fields": [],
+      "field_metadata": {},
+      "placeholder_count": 0,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    },
+    "17_Divider": {
+      "layout_name": "17_Divider",
+      "category": "blank",
+      "fields": [],
+      "required_fields": [],
+      "field_metadata": {},
+      "placeholder_count": 0,
+      "supports_images": false,
+      "supports_charts": false,
+      "supports_tables": false,
+      "complexity": "simple"
+    }
+  },
+  "schema_groups": {
+    "((), 'blank')": [
+      "Custom Layout",
+      "1_Custom Layout",
+      "2_Custom Layout",
+      "38_Title and Content",
+      "Blank",
+      "16_Divider",
+      "17_Divider"
+    ],
+    "(('content', 'title'), 'text_content')": [
+      "10_Title and Content",
+      "11_Title and Content",
+      "21_Title and Content",
+      "29_Title and Content",
+      "23_Title and Content",
+      "27_Title and Content",
+      "22_Title and Content",
+      "28_Title and Content",
+      "Number/Stats highlight",
+      "3_Number/Stats highlight",
+      "39_Title and Content",
+      "45_Title and Content",
+      "1_Case Study Intro Page",
+      "4_Case Study Intro Page",
+      "2_Case Study Intro Page",
+      "5_Case Study Intro Page",
+      "41_Title and Content",
+      "40_Title and Content",
+      "43_Title and Content",
+      "46_Title and Content",
+      "47_Title and Content",
+      "18_Title and Content",
+      "20_Title and Content",
+      "26_Title and Content",
+      "9_Divider",
+      "10_Divider",
+      "12_Divider",
+      "11_Divider",
+      "13_Divider",
+      "14_Divider",
+      "12_Title and Content",
+      "13_Title and Content"
+    ],
+    "(('subtitle', 'title'), 'title_slide')": [
+      "17_Title and Content",
+      "Title Slide",
+      "1_Title Slide"
+    ],
+    "(('content', 'image1', 'image2', 'image3', 'image4', 'title'), 'image_focused')": [
+      "35_Title and Content"
+    ],
+    "(('content', 'image1', 'image2', 'image3', 'title'), 'image_focused')": [
+      "36_Title and Content"
+    ],
+    "(('content', 'image1', 'image2', 'image3', 'image4', 'image5', 'image6', 'image7', 'image8', 'title'), 'image_focused')": [
+      "42_Title and Content",
+      "44_Title and Content"
+    ],
+    "(('chart_data', 'content', 'title'), 'text_content')": [
+      "1_Number/Stats highlight",
+      "2_Number/Stats highlight"
+    ],
+    "(('content', 'title'), 'agenda')": [
+      "Agenda option 1",
+      "Agenda option 2"
+    ],
+    "(('title',), 'section_header')": [
+      "37_Title and Content",
+      "14_Title and Content",
+      "16_Title and Content",
+      "15_Title and Content",
+      "5_Divider",
+      "6_Divider",
+      "4_Divider",
+      "7_Divider",
+      "8_Divider",
+      "2_Title Slide",
+      "4_Title Slide",
+      "3_Title Slide",
+      "5_Title Slide",
+      "6_Title Slide",
+      "7_Title Slide"
+    ],
+    "(('table_data', 'title'), 'general')": [
+      "Table",
+      "1_Table"
+    ],
+    "(('content', 'image1', 'title'), 'mixed_content')": [
+      "Title Content and Image",
+      "1_Title Content and Image",
+      "Case Study Intro Page",
+      "3_Case Study Intro Page"
+    ],
+    "(('content',), 'text_content')": [
+      "24_Title and Content",
+      "25_Title and Content",
+      "Contact info"
+    ]
+  },
+  "unique_schema_count": 12,
+  "statistics": {
+    "by_category": {
+      "blank": 7,
+      "text_content": 37,
+      "title_slide": 3,
+      "image_focused": 4,
+      "agenda": 2,
+      "section_header": 15,
+      "general": 2,
+      "mixed_content": 4
+    },
+    "with_images": 8,
+    "with_charts": 2,
+    "with_tables": 2,
+    "complexity_distribution": {
+      "simple": 64,
+      "moderate": 6,
+      "complex": 4
+    }
+  }
+}

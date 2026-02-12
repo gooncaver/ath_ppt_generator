@@ -1,8 +1,8 @@
 # Quick Start Guide
 
-## Phase 1 MVP - Text to PowerPoint
+## Phase 3 - AI-Powered Slide Generation
 
-This guide will help you get started with the basic text-to-slides generator.
+This guide will help you get started with the enhanced AI slide generator featuring schema-guided generation and holistic review.
 
 ## Prerequisites Checklist
 
@@ -42,18 +42,26 @@ python src/template_inspector.py templates/base_template.pptx
 
 This will output all available layouts and their placeholders.
 
-### 5. Generate Your First Presentation
+### 5. Set Up OpenAI API Key
 
-Use the sample content:
+Create a `.env` file with your OpenAI API key:
 
-```powershell
-python src/mvp_generator.py templates/base_template.pptx examples/sample.md
+```
+OPENAI_API_KEY=your-key-here
 ```
 
-Or use your own markdown file:
+### 6. Generate Your First Presentation
+
+Use the AI-powered generator:
 
 ```powershell
-python src/mvp_generator.py templates/base_template.pptx path/to/your/content.md output/result.pptx
+python src/smart_generator_v3.py templates/SavedTheme.pptx input/your_document.txt output/result.pptx
+```7
+
+Or disable holistic review for faster generation:
+
+```powershell
+python src/smart_generator_v3.py templates/SavedTheme.pptx input/your_document.txt output/result.pptx --no-review
 ```
 
 ### 6. Open and Review
