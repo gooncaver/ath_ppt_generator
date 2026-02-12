@@ -1,0 +1,19 @@
+# Core PowerPoint manipulation
+python-pptx==0.6.23
+
+# LLM Integration
+openai>=1.12.0
+
+# Image processing
+Pillow>=10.0.0
+opencv-python>=4.8.0
+
+# Configuration and utilities
+python-dotenv>=1.0.0
+PyYAML>=6.0.1
+
+# CLI framework (for later phases)
+click>=8.1.7
+
+# Testing
+pytest>=7.4.0

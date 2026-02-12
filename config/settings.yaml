@@ -1,0 +1,45 @@
+# PowerPoint Generator Configuration
+
+# Template settings
+template:
+  # Path to the base PowerPoint template with theme and layouts
+  path: "templates/base_template.pptx"
+  # Theme file (for reference/documentation)
+  theme_file: "Themes/Theme1.thmx"
+
+# LLM settings
+llm:
+  provider: "openai"  # openai, azure_openai, or local
+  model: "gpt-4o"
+  max_tokens: 4096
+  temperature: 0.7
+
+# Content processing
+content:
+  # Supported file formats
+  text_formats:
+    - ".txt"
+    - ".md"
+  image_formats:
+    - ".jpg"
+    - ".jpeg"
+    - ".png"
+    - ".gif"
+    - ".bmp"
+  video_formats:
+    - ".mp4"
+    - ".avi"
+    - ".mov"
+
+# Slide generation
+slides:
+  # Target slides per section (guideline for LLM)
+  default_slides_per_section: 3
+  # Maximum content per slide
+  max_bullets_per_slide: 5
+  max_chars_per_bullet: 120
+
+# Output settings
+output:
+  default_directory: "output"
+  timestamp_filenames: true
