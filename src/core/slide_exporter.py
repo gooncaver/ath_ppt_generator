@@ -1,12 +1,18 @@
 """
 Slide Exporter - Export PowerPoint slides as images
 Enables visual review by LLM during generation
+
+Supports multiple export methods:
+- LibreOffice headless (fast, cross-platform, no PowerPoint needed)
+- Windows COM automation (high quality, Windows-only)
+- python-pptx fallback (cross-platform)
 """
 
 import os
+import subprocess
 import tempfile
 from pathlib import Path
-from typing import Optional, Tuple
+from typing import Optional, Tuple, List
 from pptx import Presentation
 from PIL import Image
 import io
@@ -166,15 +172,19 @@ class SlideExporter:
         self,
         output_dir: str,
         format: str = 'PNG',
-        size: Tuple[int, int] = (1280, 720)
-    ) -> list:
+        size: Tuple[int, int] = (1280, 720),
+        dpi: int = 150,
+        use_libreoffice: bool = True
+    ) -> List[str]:
         """
         Export all slides in presentation
         
         Args:
             output_dir: Directory to save slides
-            format: Image format
-            size: Output size
+            format: Image format (PNG, JPG)
+            size: Output size (width, height) - used for COM method
+            dpi: DPI for LibreOffice export (default 150)
+            use_libreoffice: Try LibreOffice first (5-10x faster)
             
         Returns:
             List of exported file paths
@@ -185,8 +195,16 @@ class SlideExporter:
         output_path = Path(output_dir)
         output_path.mkdir(parents=True, exist_ok=True)
         
-        exported_files = []
+        # Try LibreOffice headless mode first (much faster)
+        if use_libreoffice:
+            try:
+                return self._export_all_with_libreoffice(output_dir, format, dpi)
+            except Exception as e:
+                print(f"  LibreOffice export failed: {e}")
+                print(f"  Falling back to slower COM/individual export...")
         
+        # Fallback to individual slide export (slower)
+        exported_files = []
         for i in range(len(self.prs.slides)):
             slide_path = output_path / f"Slide{i+1}.{format.upper()}"
             try:
@@ -195,6 +213,81 @@ class SlideExporter:
                 print(f"  Exported slide {i+1}/{len(self.prs.slides)}: {slide_path.name}")
             except Exception as e:
                 print(f"  Error exporting slide {i+1}: {e}")
+        
+        return exported_files
+    
+    def _export_all_with_libreoffice(
+        self,
+        output_dir: str,
+        format: str = 'PNG',
+        dpi: int = 150
+    ) -> List[str]:
+        """
+        Fast batch export using LibreOffice headless mode
+        
+        This method is 5-10x faster than COM automation because:
+        1. Single PPTX -> PDF conversion (no PowerPoint launch)
+        2. Batch PDF -> images conversion
+        3. No GUI overhead
+        
+        Requires:
+        - LibreOffice installed and 'soffice' in PATH
+        - pdf2image library (pip install pdf2image)
+        - poppler installed (for pdf2image)
+        
+        Args:
+            output_dir: Directory to save slides
+            format: Image format (PNG, JPG)
+            dpi: Resolution for image export
+            
+        Returns:
+            List of exported file paths
+        """
+        from pdf2image import convert_from_path
+        
+        output_path = Path(output_dir)
+        output_path.mkdir(parents=True, exist_ok=True)
+        
+        # Step 1: Convert entire PPTX to PDF using LibreOffice (single operation)
+        pdf_path = output_path / 'temp_presentation.pdf'
+        pptx_abs_path = str(Path(self.presentation_path).absolute())
+        
+        print(f"  Converting PPTX to PDF via LibreOffice...")
+        result = subprocess.run([
+            'soffice',
+            '--headless',
+            '--convert-to', 'pdf',
+            '--outdir', str(output_path),
+            pptx_abs_path
+        ], capture_output=True, text=True, timeout=120)
+        
+        if result.returncode != 0:
+            raise RuntimeError(f"LibreOffice conversion failed: {result.stderr}")
+        
+        # Rename PDF to expected name (LibreOffice uses original filename)
+        generated_pdf = output_path / f"{Path(self.presentation_path).stem}.pdf"
+        if generated_pdf.exists():
+            generated_pdf.rename(pdf_path)
+        
+        if not pdf_path.exists():
+            raise FileNotFoundError(f"PDF not created at {pdf_path}")
+        
+        # Step 2: Convert all PDF pages to images (batch operation)
+        print(f"  Converting PDF to images (DPI={dpi})...")
+        images = convert_from_path(str(pdf_path), dpi=dpi)
+        
+        exported_files = []
+        for i, image in enumerate(images):
+            img_path = output_path / f'Slide{i+1}.{format.upper()}'
+            image.save(img_path, format.upper())
+            exported_files.append(str(img_path))
+            print(f"  Exported slide {i+1}/{len(images)}: {img_path.name}")
+        
+        # Cleanup temporary PDF
+        try:
+            pdf_path.unlink()
+        except:
+            pass
         
         return exported_files
     

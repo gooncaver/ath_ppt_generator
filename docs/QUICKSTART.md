@@ -9,6 +9,8 @@ This guide will help you get started with the enhanced AI slide generator featur
 - [ ] Python 3.10+ installed
 - [ ] PowerPoint template file (.pptx) with your desired layouts
 - [ ] Virtual environment created
+- [ ] LibreOffice installed (for fast slide export - optional but recommended)
+- [ ] OpenAI API key
 
 ## Step-by-Step Setup
 
@@ -25,14 +27,33 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-### 3. Add Your Template
+### 3. Install LibreOffice (Optional but Recommended)
+
+For **5-10x faster slide export** during holistic review:
+
+**Windows:**
+```powershell
+# Using Chocolatey
+choco install libreoffice
+
+# Or download installer from: https://www.libreoffice.org/download/
+```
+
+**Verify Installation:**
+```powershell
+soffice --version
+```
+
+**Note:** Without LibreOffice, the system will fall back to slower PowerPoint COM automation (Windows only) or manual conversion.
+
+### 4. Add Your Template
 
 Place your PowerPoint template in the `templates/` folder:
 - File name: `base_template.pptx`
 - Should have Theme1.thmx applied
 - Should contain layouts like "Title and Content", "Title Slide", etc.
 
-### 4. Inspect Your Template
+### 5. Inspect Your Template
 
 Verify what layouts are available:
 
@@ -42,7 +63,7 @@ python src/template_inspector.py templates/base_template.pptx
 
 This will output all available layouts and their placeholders.
 
-### 5. Set Up OpenAI API Key
+### 6. Set Up OpenAI API Key
 
 Create a `.env` file with your OpenAI API key:
 
@@ -50,13 +71,13 @@ Create a `.env` file with your OpenAI API key:
 OPENAI_API_KEY=your-key-here
 ```
 
-### 6. Generate Your First Presentation
+### 7. Generate Your First Presentation
 
 Use the AI-powered generator:
 
 ```powershell
 python src/smart_generator_v3.py templates/SavedTheme.pptx input/your_document.txt output/result.pptx
-```7
+```
 
 Or disable holistic review for faster generation:
 
@@ -64,7 +85,7 @@ Or disable holistic review for faster generation:
 python src/smart_generator_v3.py templates/SavedTheme.pptx input/your_document.txt output/result.pptx --no-review
 ```
 
-### 6. Open and Review
+### 8. Open and Review
 
 ```powershell
 start output/presentation_*.pptx
