@@ -111,6 +111,55 @@ Make sure you've activated the virtual environment and installed dependencies:
 pip install -r requirements.txt
 ```
 
+### SSL Certificate Error (Corporate Networks)
+If you see `CERTIFICATE_VERIFY_FAILED` or `self-signed certificate in certificate chain` errors:
+
+**Option 1: Configure SSL Certificate Bundle (Recommended)**
+Add to your `.env` file:
+```
+SSL_CERT_FILE=path/to/your/corporate/certificate.pem
+REQUESTS_CA_BUNDLE=path/to/your/corporate/certificate.pem
+```
+
+**Option 2: Disable SSL Verification (Not Recommended for Production)**
+Add to your `.env` file:
+```
+CURL_CA_BUNDLE=""
+```
+
+Or temporarily set environment variable:
+```powershell
+$env:CURL_CA_BUNDLE=""
+python src/smart_generator_v3.py templates/SavedTheme.pptx input/your_document.txt output/result.pptx
+```
+
+**Option 3: Contact IT Support**
+Request the corporate SSL certificate bundle or proxy configuration for Python development.
+
+### OpenAI API Connection Issues
+If you encounter connection errors:
+- Verify your API key is correct in `.env`
+- Check if you're behind a corporate proxy
+- Ensure firewall allows outbound connections to `api.openai.com`
+- Test API connectivity: `curl https://api.openai.com/v1/models -H "Authorization: Bearer YOUR_API_KEY"`
+
+### Spurious KeyboardInterrupt Errors
+If you see `KeyboardInterrupt` exceptions without pressing any keys:
+- **Cause**: Network timeouts or unstable connections causing the HTTP client to hang
+- **Solution**: The application now includes automatic retry logic with exponential backoff
+- **Workaround**: If the issue persists, try:
+  - Using a more stable network connection
+  - Reducing input document size to decrease API response time
+  - Checking corporate firewall/proxy isn't blocking or throttling OpenAI API calls
+
+### Corporate Firewall Blocking OpenAI
+If you receive an HTML response from `appcontrol.merckgroup.com` or similar:
+- Your corporate firewall is blocking AI services (category: `url_Cat_Everyday_AI`)
+- **Solutions**:
+  1. Request IT to whitelist `api.openai.com` for development purposes
+  2. Use a personal network/hotspot temporarily
+  3. Work with IT to configure approved AI service access
+
 ## What's Next?
 
 Once Phase 1 MVP is working:

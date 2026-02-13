@@ -59,7 +59,7 @@ class SmartGeneratorV3:
         for layout in self.prs.slide_layouts:
             self.layout_dict[layout.name] = layout
         
-        print(f"✓ Loaded template with {len(self.schemas)} layouts")
+        print(f"[OK] Loaded template with {len(self.schemas)} layouts")
     
     def generate_from_text(
         self,
@@ -120,7 +120,7 @@ class SmartGeneratorV3:
         output_file.parent.mkdir(parents=True, exist_ok=True)
         self.prs.save(str(output_file))
         
-        print(f"\n✓ Presentation saved: {output_path}")
+        print(f"\n[OK] Presentation saved: {output_path}")
         
         # STAGE 4: Batch export and review (if enabled)
         if enable_review:
@@ -130,12 +130,12 @@ class SmartGeneratorV3:
             review_path = output_file.with_suffix('.review.json')
             with open(review_path, 'w', encoding='utf-8') as f:
                 json.dump(review, f, indent=2)
-            print(f"\n✓ Review saved: {review_path}")
+            print(f"\n[OK] Review saved: {review_path}")
         
         # Print usage stats
         stats = self.llm_client.get_usage_stats()
         print(f"\n{'='*70}")
-        print(f"✓ Presentation complete: {output_file}")
+        print(f"[OK] Presentation complete: {output_file}")
         print(f"{'='*70}\n")
         print(f"AI Usage Stats:")
         print(f"  Total tokens: {stats['total_tokens']:,}")
@@ -206,7 +206,7 @@ class SmartGeneratorV3:
         temp_exporter = SlideExporter(str(output_file))
         slide_images = temp_exporter.export_all_slides(str(export_dir))
         
-        print(f"\n✓ Exported {len(slide_images)} slides to {export_dir}")
+        print(f"\n[OK] Exported {len(slide_images)} slides to {export_dir}")
         
         # Review
         review = self.reviewer.review_presentation(

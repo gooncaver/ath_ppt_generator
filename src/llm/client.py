@@ -4,11 +4,13 @@ Handles API calls, rate limiting, and error handling
 """
 
 import os
+import ssl
 from typing import Optional, Dict, List, Any
 from openai import OpenAI
 from dotenv import load_dotenv
 import time
 import json
+import httpx
 
 
 class LLMClient:
@@ -32,8 +34,29 @@ class LLMClient:
                 "OpenAI API key not found. Set OPENAI_API_KEY in .env file or pass as parameter"
             )
         
+        # Create HTTP client with SSL verification disabled if requested
+        http_client = None
+        disable_ssl = os.getenv("DISABLE_SSL_VERIFY", "").lower() in ("true", "1", "yes")
+        
+        # Set timeout - default 10 minutes for large responses (600 seconds)
+        timeout = httpx.Timeout(
+            timeout=600.0,  # Total timeout
+            connect=10.0,   # Connection timeout
+            read=300.0,     # Read timeout (5 minutes)
+            write=30.0      # Write timeout
+        )
+        
+        if disable_ssl:
+            http_client = httpx.Client(
+                verify=False, 
+                follow_redirects=True,
+                timeout=timeout
+            )
+        else:
+            http_client = httpx.Client(timeout=timeout)
+        
         # Initialize client
-        self.client = OpenAI(api_key=self.api_key)
+        self.client = OpenAI(api_key=self.api_key, http_client=http_client)
         self.model = model
         
         # Track usage
@@ -60,47 +83,64 @@ class LLMClient:
         Returns:
             Dict with 'content', 'tokens', 'cost'
         """
-        try:
-            # Make API call
-            params = {
-                "model": self.model,
-                "messages": messages,
-                "temperature": temperature,
-            }
-            
-            # GPT-5 uses max_completion_tokens instead of max_tokens
-            if self.model.startswith("gpt-5") or self.model.startswith("o1"):
-                params["max_completion_tokens"] = max_tokens
-            else:
-                params["max_tokens"] = max_tokens
-            
-            if response_format:
-                params["response_format"] = response_format
-            
-            response = self.client.chat.completions.create(**params)
-            
-            # Extract response
-            content = response.choices[0].message.content
-            
-            # Calculate usage
-            tokens_used = response.usage.total_tokens
-            cost = self._calculate_cost(tokens_used)
-            
-            # Update tracking
-            self.total_tokens += tokens_used
-            self.total_cost += cost
-            self.call_count += 1
-            
-            return {
-                "content": content,
-                "tokens": tokens_used,
-                "cost": cost,
-                "finish_reason": response.choices[0].finish_reason
-            }
-            
-        except Exception as e:
-            print(f"Error calling OpenAI API: {e}")
-            raise
+        max_retries = 3
+        retry_delay = 2  # seconds
+        
+        for attempt in range(max_retries):
+            try:
+                # Make API call
+                params = {
+                    "model": self.model,
+                    "messages": messages,
+                    "temperature": temperature,
+                }
+                
+                # GPT-5 uses max_completion_tokens instead of max_tokens
+                if self.model.startswith("gpt-5") or self.model.startswith("o1"):
+                    params["max_completion_tokens"] = max_tokens
+                else:
+                    params["max_tokens"] = max_tokens
+                
+                if response_format:
+                    params["response_format"] = response_format
+                
+                response = self.client.chat.completions.create(**params)
+                
+                # Debug: Check if response is valid
+                if isinstance(response, str):
+                    raise ValueError(f"Unexpected string response from API. This may indicate a proxy/firewall issue. Response: {response[:500]}")
+                
+                # Extract response
+                content = response.choices[0].message.content
+                
+                # Calculate usage
+                tokens_used = response.usage.total_tokens
+                cost = self._calculate_cost(tokens_used)
+                
+                # Update tracking
+                self.total_tokens += tokens_used
+                self.total_cost += cost
+                self.call_count += 1
+                
+                return {
+                    "content": content,
+                    "tokens": tokens_used,
+                    "cost": cost,
+                    "finish_reason": response.choices[0].finish_reason
+                }
+                
+            except KeyboardInterrupt:
+                # Don't retry on actual user interrupts
+                raise
+            except Exception as e:
+                if attempt < max_retries - 1:
+                    print(f"API call failed (attempt {attempt + 1}/{max_retries}): {e}")
+                    print(f"Retrying in {retry_delay} seconds...")
+                    time.sleep(retry_delay)
+                    retry_delay *= 2  # Exponential backoff
+                else:
+                    print(f"Error calling OpenAI API after {max_retries} attempts: {e}")
+                    raise
     
     def vision_analysis(
         self,
