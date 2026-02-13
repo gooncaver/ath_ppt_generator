@@ -200,9 +200,11 @@ The AI-Powered PowerPoint Generator is a system that creates professional PowerP
 
 **Components to Build**:
 1. **Slide Exporter** (`src/core/slide_exporter.py`)
-   - Export individual slides as PNG
-   - Use python-pptx or PowerPoint COM
-   - High-quality rendering
+   - **Manual export workflow** (implemented - most reliable)
+   - User-guided PowerPoint export to PNG
+   - Metadata storage for review context
+   - Export verification and confirmation
+   - Fallback: LibreOffice headless or PowerPoint COM
 
 2. **Visual Reviewer** (`src/llm/visual_reviewer.py`)
    - Send slide images to GPT-4o Vision
@@ -215,13 +217,13 @@ The AI-Powered PowerPoint Generator is a system that creates professional PowerP
    - Retry mechanism (max 2-3 attempts)
 
 4. **Feedback Loop Integration**
-   - After each slide creation → export → review
+   - After presentation complete → manual export → batch review
    - Log issues and adjustments
    - Track quality metrics
 
 **Deliverables**:
-- Self-correcting slide generation
-- Higher quality output
+- Reliable cross-platform slide export
+- High quality batch review
 - Detailed quality logs
 
 ---

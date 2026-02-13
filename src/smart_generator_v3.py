@@ -123,14 +123,16 @@ class SmartGeneratorV3:
         print(f"\n[OK] Presentation saved: {output_path}")
         
         # STAGE 4: Batch export and review (if enabled)
+        review = None
         if enable_review:
             review = self._run_holistic_review(output_file, text_content, outline)
             
-            # Save review results
-            review_path = output_file.with_suffix('.review.json')
-            with open(review_path, 'w', encoding='utf-8') as f:
-                json.dump(review, f, indent=2)
-            print(f"\n[OK] Review saved: {review_path}")
+            # Save review results (if review was completed)
+            if review:
+                review_path = output_file.with_suffix('.review.json')
+                with open(review_path, 'w', encoding='utf-8') as f:
+                    json.dump(review, f, indent=2)
+                print(f"\n[OK] Review saved: {review_path}")
         
         # Print usage stats
         stats = self.llm_client.get_usage_stats()
@@ -193,22 +195,88 @@ class SmartGeneratorV3:
         output_file: Path,
         original_content: str,
         outline: Dict
-    ) -> Dict:
-        """Export and review presentation"""
+    ) -> Optional[Dict]:
+        """Guide user through manual slide export and then review"""
         print(f"\n{'='*70}")
-        print("BATCH EXPORT & HOLISTIC REVIEW")
+        print("HOLISTIC REVIEW - MANUAL SLIDE EXPORT")
         print(f"{'='*70}")
         
-        # Export all slides
+        # Prepare export directory and metadata
         export_dir = output_file.parent / f"{output_file.stem}_slides"
         export_dir.mkdir(exist_ok=True)
         
-        temp_exporter = SlideExporter(str(output_file))
-        slide_images = temp_exporter.export_all_slides(str(export_dir))
+        metadata_file = export_dir / "review_metadata.json"
         
-        print(f"\n[OK] Exported {len(slide_images)} slides to {export_dir}")
+        # Save metadata for review
+        metadata = {
+            "presentation_file": str(output_file.absolute()),
+            "original_content": original_content,
+            "outline": outline,
+            "num_slides": len(self.prs.slides),
+            "export_directory": str(export_dir.absolute()),
+            "expected_files": [f"Slide{i+1}.PNG" for i in range(len(self.prs.slides))]
+        }
         
-        # Review
+        with open(metadata_file, 'w', encoding='utf-8') as f:
+            json.dump(metadata, f, indent=2)
+        
+        # Guide user through manual export
+        print(f"\n{'='*70}")
+        print("MANUAL EXPORT REQUIRED")
+        print(f"{'='*70}")
+        print(f"\nPresentation saved: {output_file}")
+        print(f"Export directory: {export_dir}")
+        print(f"\nPlease follow these steps:")
+        print(f"\n  1. Open the presentation in PowerPoint:")
+        print(f"     {output_file.absolute()}")
+        print(f"\n  2. Go to File > Export > Change File Type > PNG Portable Network Graphics")
+        print(f"     OR")
+        print(f"     Go to File > Save As > Save as type: PNG")
+        print(f"\n  3. When prompted, select 'All Slides'")
+        print(f"\n  4. Save to this directory:")
+        print(f"     {export_dir.absolute()}")
+        print(f"\n  5. PowerPoint will create files: Slide1.PNG, Slide2.PNG, etc.")
+        print(f"\n  Expected {len(self.prs.slides)} slide images")
+        print(f"\n{'='*70}")
+        
+        # Wait for user confirmation
+        response = input("\nHave you exported all slides to PNG? (yes/no): ").strip().lower()
+        
+        if response not in ['yes', 'y']:
+            print("\n[SKIPPED] Review cancelled. You can run review later using run_review.py")
+            return None
+        
+        # Verify exported files exist
+        slide_images = []
+        missing_slides = []
+        
+        for i in range(len(self.prs.slides)):
+            slide_file = export_dir / f"Slide{i+1}.PNG"
+            if slide_file.exists():
+                slide_images.append(str(slide_file))
+            else:
+                missing_slides.append(i+1)
+        
+        if missing_slides:
+            print(f"\n[WARNING] Missing slide images: {missing_slides}")
+            print(f"Found {len(slide_images)}/{len(self.prs.slides)} slides")
+            
+            response = input("Continue with available slides? (yes/no): ").strip().lower()
+            if response not in ['yes', 'y']:
+                print("\n[SKIPPED] Review cancelled")
+                return None
+        
+        if not slide_images:
+            print("\n[ERROR] No slide images found. Please export slides and try again.")
+            return None
+        
+        print(f"\n[OK] Found {len(slide_images)} slide images")
+        
+        # Run review
+        print(f"\n{'='*70}")
+        print("RUNNING HOLISTIC REVIEW")
+        print(f"{'='*70}")
+        
         review = self.reviewer.review_presentation(
             slide_images=slide_images,
             original_content=original_content,
